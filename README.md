@@ -72,3 +72,5 @@ git revert (ID_commit)--no-edit: Añadiendo --no-edit logramos que no nos aparez
 * **git log -p:** Muestra además del ID y el autor de la revisión, las diferencias que se han producido en el archivo en esta nueva revisión.
 * **git log -p -n 2:** Delimita el número de revisiones que mostrará. En trabajos de gran tamaño se realizan muchas revisiones por lo que es necesario acotar la información que con el comando superior sería muy numerosa. En este ejemplo, nos mostraría las dos últimas revisiones.
 * **git log --since="3 weeks ago" --until="1 hour ago":** Delimita el número de revisiones a mostrar. En este ejemplo mostrará los commits realizados desde hace tres semanas hasta hace una hora.
+* **git blame nombre_archivo:** Con este comando conoceremos quienes han insertado cambios en un archivo.
+* **git blame -L 2,5 nombre_archivo:** Podemos deliminar más indicando las líneas concretas del archivo donde queremos que nos muestre quienes han insertado cambios.
