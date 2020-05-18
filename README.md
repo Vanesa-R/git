@@ -4,19 +4,22 @@
 
 * **git init:** Inicia un repositorio.
 
-* **git status:** Para conocer el estado de nuestros ficheros. Podemos tener ficheros en el área de trabajo, área de preparación y área de aprobación.
+* **git status:** Para conocer el estado de nuestros archivos. Podemos tener archivos en el área de trabajo, área de preparación y área de aprobación.
 
-* **git add:** Para añadir ficheros al área de preparación.
+* **git add:** Para añadir archivos al área de preparación.
 
 * **git commit:** Para aprobar cambios añadidos previamente al área de preparación.
 
-* **git rm:** Para eliminar ficheros. (git rm nombre_fichero)
+* **git rm:** Para eliminar archivos. (git rm nombre_fichero)
 
-* **git mv:** Para renombrar ficheros. (git mv nombre_anterior nombre_nuevo)
+* **git mv:** Para renombrar archivos. (git mv nombre_anterior nombre_nuevo)
 
-* **git diff:** Para ver las diferencias que existen cuando se hacen cambios en un fichero (compara un fichero que ha sido aprobado previamente y ahora tiene cambios en el área de trabajo). Muy importante, si hacemos cambios en un fichero, y después lo llevamos al área de preparación, al lanzar este comando no nos indicará si tiene diferencias con el fichero que se encuentra en el área de aprobación.
+* **git diff:** Muestra las diferencias que existen cuando se hacen cambios en un archivo. Compara los cambios de un archivo que ha sido aprobado (commit) y ahora tiene cambios en el área de trabajo). 
+Muy importante: si hacemos cambios en un archivo, y después lo llevamos al área de preparación (add), al lanzar este comando no nos indicará si tiene diferencias con el archivo que se encuentra en el área de aprobación.
 
-* **git diff --staged:** Para ver las diferencias que existen cuando hacemos cambios en un fichero (en este caso compara los cambios del fichero en el área de preparación y el área de trabajo).
+* **git diff --staged:** Compara los cambios de un archivo entre el área de trabajo y el área de preparación (add).
+
+* **git diff --cached:** Compara los cambios de un archivo en el área de preparación (add) y el último commit.
 
 * **git log --oneline:** Te muestra las revisiones que se han realizado con su ID.
 
