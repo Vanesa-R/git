@@ -14,7 +14,7 @@
 
 * **git mv:** Para renombrar ficheros. (git mv nombre_anterior nombre_nuevo)
 
-* **git diff:** Para ver las diferencias que existen cuando se hacen cambios en un fichero (compara un fichero que ha sido aprobado previamente y ahora tiene cambios en el área de trabajo).
+* **git diff:** Para ver las diferencias que existen cuando se hacen cambios en un fichero (compara un fichero que ha sido aprobado previamente y ahora tiene cambios en el área de trabajo). Muy importante, si hacemos cambios en un fichero, y después lo llevamos al área de preparación, al lanzar este comando no nos indicará si tiene diferencias con el fichero que se encuentra en el área de aprobación.
 
 * **git diff --staged:** Para ver las diferencias que existen cuando hacemos cambios en un fichero (en este caso compara los cambios del fichero en el área de preparación y el área de trabajo).
 
