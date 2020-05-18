@@ -64,13 +64,31 @@ git revert (ID_commit)--no-edit: Añadiendo --no-edit logramos que no nos aparez
 
 * **git checkout -b nombre_nueva rama:** Crea una nueva rama y además nos posiciona en ella.
 
+* **git merge:** Fusionar ramas.
+
+* **git cherry-pick ID_commit:** Es posible que no nos interese fusionar a nuestra rama todo el contenido de otra rama, sino solo algunas revisiones (commits). Si queremos modificar el mensaje de la revisión añadimos -e.
 
 
 ### Trabajando con las revisiones
 
 * **git log --oneline:** Muestra las revisiones realizadas. Aparece un ID y un mensaje.
+
 * **git log -p:** Muestra además del ID y el autor de la revisión, las diferencias que se han producido en el archivo en esta nueva revisión.
+
 * **git log -p -n 2:** Delimita el número de revisiones que mostrará. En trabajos de gran tamaño se realizan muchas revisiones por lo que es necesario acotar la información que con el comando superior sería muy numerosa. En este ejemplo, nos mostraría las dos últimas revisiones.
+
 * **git log --since="3 weeks ago" --until="1 hour ago":** Delimita el número de revisiones a mostrar. En este ejemplo mostrará los commits realizados desde hace tres semanas hasta hace una hora.
+
 * **git blame nombre_archivo:** Con este comando conoceremos quienes han insertado cambios en un archivo.
+
 * **git blame -L 2,5 nombre_archivo:** Podemos deliminar más indicando las líneas concretas del archivo donde queremos que nos muestre quienes han insertado cambios.
+
+
+
+### Reescribiendo el historial de nuestro proyecto
+
+* **git rebase --interactive --root:** En proyectos con una larga vida es normal tener muchas revisiones. Podemos limpiar el historial de todas estas revisiones con rebase.
+Interactive nos permite elegir qué revisiones condensamos.
+Root nos indica desde dónde hacemos el rebase (todos).
+En la ventana que se abre, si modificamos pick por squash en las revisiones que queramos condensar, creará una revisión única con todas esas revisiones.
+
