@@ -69,6 +69,7 @@ git revert (ID_commit)--no-edit: Añadiendo --no-edit logramos que no nos aparez
 * **git cherry-pick ID_commit:** Es posible que no nos interese fusionar a nuestra rama todo el contenido de otra rama, sino solo algunas revisiones (commits). Si queremos modificar el mensaje de la revisión añadimos -e.
 
 
+
 ### Trabajando con las revisiones
 
 * **git log --oneline:** Muestra las revisiones realizadas. Aparece un ID y un mensaje.
@@ -85,10 +86,14 @@ git revert (ID_commit)--no-edit: Añadiendo --no-edit logramos que no nos aparez
 
 
 
-### Reescribiendo el historial de nuestro proyecto
+### Limpiando el historial de nuestro proyecto
 
 * **git rebase --interactive --root:** En proyectos con una larga vida es normal tener muchas revisiones. Podemos limpiar el historial de todas estas revisiones con rebase.
 Interactive nos permite elegir qué revisiones condensamos.
 Root nos indica desde dónde hacemos el rebase (todos).
 En la ventana que se abre, si modificamos pick por squash en las revisiones que queramos condensar, creará una revisión única con todas esas revisiones.
 
+
+### Recuperando nuestro trabajo
+
+* **git stash:** Fotografía lo que estemos haciendo en el área de trabajo. Si por algún motivo eliminamos ese archivo o lo modificamos, con **git stash apply** podemos recuperarlos sin que previamente estuviera en el área de preparación o commit. 
